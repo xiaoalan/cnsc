@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/content_padding" >
+
+            <TextView
+                android:id="@+id/questions_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="科目一：顺序练习"
+                android:textColor="@color/c_FD620D"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="1、驾驶机动车在道路上违法道路交通安全法的行为，属于什么行为:"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/select_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_F7F7F7" >
+
+                <RadioButton
+                    android:id="@+id/select_a"
+                    android:text="A:违章行为"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/select_b"
+                    android:text="B:违法行为"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/select_c"
+                    android:text="C:过失行为"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/select_d"
+                    android:text="D:违规行为"
+                    android:textColor="@android:color/black" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/questions_result_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/c_F7F7F7"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/questions_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/c_fd003d"
+                    android:gravity="center_vertical"
+                    android:text="正确答案是:B"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/questions_result1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="为什么是B？"
+                    android:textColor="@color/c_646464" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/c_F7F7F7"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上一题" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="下一题" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="本题分析" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
