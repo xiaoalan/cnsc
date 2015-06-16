@@ -8,7 +8,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import app.ui.FragmentCallback;
 import app.ui.fragment.ProfileFragment;
 import app.ui.fragment.ServiceFragment;
@@ -19,12 +23,13 @@ import app.ui.widget.TabView.OnTabChangeListener;
 import app.util.DialogUtils;
 import app.util.FragmentUtils;
 
-public class StartActivity extends FragmentActivity implements OnTabChangeListener, FragmentCallback {
+public class StartActivity extends FragmentActivity implements OnTabChangeListener, FragmentCallback,OnClickListener {
 
     private FragmentManager mFragmentManager;
     private Fragment mCurrentFragment;
     private TabView mTabView;
     private TextView mTitleTextView;
+    private Button forward;
 
     /** 上一次的状态 */
     private int mPreviousTabIndex = 1;
@@ -47,7 +52,9 @@ public class StartActivity extends FragmentActivity implements OnTabChangeListen
     {	
         setContentView(R.layout.activity_start);
         mTitleTextView = (TextView) findViewById(R.id.text_title);
+        forward = (Button) findViewById(R.id.button_forward);
         mTabView = (TabView) findViewById(R.id.view_tab);
+        forward.setOnClickListener(this);
         mTabView.setOnTabChangeListener(this);
         mTabView.setCurrentTab(mCurrentTabIndex);
 //        mCurrentFragment = new ServiceFragment();
@@ -163,4 +170,15 @@ public class StartActivity extends FragmentActivity implements OnTabChangeListen
         }
         return super.onKeyDown(keyCode, event);
     }
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.button_forward:
+			Toast.makeText(this, "fk", 0).show();
+			break;
+
+		default:
+			break;
+		}
+	}
 }

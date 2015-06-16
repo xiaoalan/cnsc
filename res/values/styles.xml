@@ -7,6 +7,10 @@
         <item name="android:textSize">18dp</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
+    <style name="text_979797_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/c_979797</item>
+    </style>
     <style name="text_646464_18">
         <item name="android:textSize">18dp</item>
         <item name="android:textColor">@color/c_979797</item>

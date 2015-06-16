@@ -27,16 +27,16 @@
         android:visibility="invisible" />
 
     <Button
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
         android:id="@+id/button_forward"
         style="@style/Text.Title_Button"
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
         android:layout_alignParentRight="true"
-        android:background="@drawable/button_backward_selector"
+        android:background="@drawable/title_fk"
         android:gravity="center"
         android:onClick="onClick"
-        android:paddingRight="@dimen/table_margin"
-        android:text="@string/button_submit"
-        android:visibility="invisible" />
+        />
 
 </RelativeLayout>

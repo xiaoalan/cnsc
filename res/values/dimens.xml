@@ -12,6 +12,7 @@
 
     <!-- 行高 -->
     <dimen name="row_height">45dp</dimen>
+    <dimen name="button_size">38dp</dimen>
 
     <!-- 行padding -->
     <dimen name="row_padding">10dp</dimen>

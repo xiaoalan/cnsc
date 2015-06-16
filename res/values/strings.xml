@@ -48,5 +48,9 @@
     <string name="home_hc">货车</string>
     <string name="home_gjc">公交车</string>
     <string name="home_mtc">摩托车</string>
+    
+    <!-- 科目二 -->
+    <string name="km2_pxxx">培训信息</string>
+    <string name="km2_jly_xy">"教练员：齐师傅 | 学员：陈斌</string>
 
 </resources>

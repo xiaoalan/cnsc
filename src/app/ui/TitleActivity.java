@@ -25,6 +25,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class TitleActivity extends BaseActivity implements OnClickListener {
@@ -142,8 +143,10 @@ public class TitleActivity extends BaseActivity implements OnClickListener {
                 break;
 
             case R.id.button_forward:
-                onForward(v);
-                break;
+//                onForward(v);
+                Toast.makeText(this, "意见反馈", 0).show();
+            	
+            	break;
 
             default:
                 break;
