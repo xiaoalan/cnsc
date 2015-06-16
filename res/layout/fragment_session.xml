@@ -1,212 +1,384 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_CONTENT"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@color/c_ffffff"
+    android:paddingLeft="@dimen/content_padding"
+    android:paddingRight="@dimen/content_padding"
+    android:paddingTop="@dimen/content_padding"
+    >
 
     <LinearLayout
-        android:id="@+id/layout_CONTENT"
+        android:id="@+id/home_ll_3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/c_ffffff"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
         android:orientation="vertical"
-        android:padding="@dimen/content_padding" >
-
-        <LinearLayout
+        android:paddingLeft="@dimen/table_padding"
+        android:paddingRight="@dimen/table_padding"
+        android:paddingTop="@dimen/table_padding"
+        >
+        <RelativeLayout
+            android:id="@+id/layout_privacy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal" >
+            android:layout_height="@dimen/row_height"
+            android:layout_marginBottom="@dimen/row_margin"
+            android:layout_marginTop="@dimen/row_margin"
+            android:paddingLeft="@dimen/row_padding_left"
+            android:paddingRight="@dimen/row_padding_right" >
+
+            <TextView
+                style="@style/text_646464_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_xsbk"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="@string/home_xsbk" />
 
             <ImageView
-                android:id="@+id/px_xc"
+                android:layout_marginRight="20dp"
+                android:id="@+id/xlc_sp_dcrk"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/icon_xc" />
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/go" />
 
-            <ImageView
-                android:id="@+id/px_hc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_hc" />
-
-            <ImageView
-                android:id="@+id/px_gjc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_gjc" />
-
-            <ImageView
-                android:id="@+id/px_mtc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_mtc" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/px_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="您学习类型是：小车"
-            android:textColor="@color/c_ff9900"
-            android:textSize="18sp" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/c_b6b6b6" />
+            android:layout_marginRight="5dp"
+            android:background="@color/c_DFDFDF" />
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/layout_general"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:paddingLeft="@dimen/row_padding_left"
+            android:paddingRight="@dimen/row_padding_right" >
+
+            <TextView
+                style="@style/text_646464_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_ksjq"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="@string/home_ksjq" />
+
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:id="@+id/xlc_sp_cftc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/go" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/c_DFDFDF" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:paddingLeft="@dimen/row_padding_left"
+            android:paddingRight="@dimen/row_padding_right" >
+
+            <TextView
+                style="@style/text_646464_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/home_jxcx"
+                android:drawablePadding="10dp"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:text="@string/home_jxcx" />
+
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:id="@+id/xlc_sp_pddd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/go" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_up_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_646464_18"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_xc"
+            android:id="@+id/px_xc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal" >
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:text="@string/home_xc"/>
 
-            <RelativeLayout
-                android:id="@+id/kemu1"
-                android:layout_width="match_parent"
+        <TextView
+            style="@style/text_646464_18"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_hc"
+            android:id="@+id/px_hc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:text="@string/home_hc"/>
+        <TextView
+            style="@style/text_646464_18"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_gjc"
+            android:id="@+id/px_gjc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:text="@string/home_gjc"/>
+        <TextView
+            style="@style/text_646464_18"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_mtc"
+            android:id="@+id/px_mtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:text="@string/home_mtc"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/px_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_up_select"
+        android:layout_marginTop="10dp"
+        android:text="您学习类型是：小车"
+        android:textColor="@color/c_ff9900"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/home_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/px_tv"
+        android:layout_marginTop="8dp"
+        android:background="@color/c_DFDFDF" />
+
+    <LinearLayout
+        android:id="@+id/home_ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_view_1"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/kemu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:background="@drawable/px_km1" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/px_km1" />
-				
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
                 <TextView
                     android:id="@+id/home_kemu1_id"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:text="@string/home_kemu1"
                     android:textColor="@color/white"
                     android:textSize="22sp" />
+
                 <TextView
-                    android:layout_below="@id/home_kemu1_id"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:text="@string/home_kemu1_ll"
                     android:textColor="@color/white"
-                    android:textSize="22sp" />
-            </RelativeLayout>
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
 
-            <View
-                android:layout_width="10dp"
-                android:layout_height="match_parent" />
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
 
-            <RelativeLayout
-                android:id="@+id/kemu2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1" >
+        <RelativeLayout
+            android:id="@+id/kemu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-                <ImageView
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/px_km2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/home_kemu2_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/px_km2" />
+                    android:gravity="center"
+                    android:text="@string/home_kemu2"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="@string/home_kemu1"
+                    android:text="@string/home_kemu2_ll"
                     android:textColor="@color/white"
-                    android:textSize="25sp" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/kemu3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="#A700A0"
-                android:gravity="center"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/kemu4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:background="#3775E9"
-                android:gravity="center"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-
-        <TextView
-            android:id="@+id/px_ksjq"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#DA5130"
-            android:gravity="center"
-            android:text="考试技巧"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#6437B9"
-            android:gravity="center"
-            android:text="驾校查询"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#149CAC"
-            android:gravity="center"
-            android:text="驾考社区"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
-</ScrollView>
+    <View
+        android:id="@+id/home_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/home_ll_1" />
+
+    <LinearLayout
+        android:id="@+id/home_ll_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_view_2"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/kemu3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/px_km3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/home_kemu3_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/home_kemu3"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/home_kemu3_ll"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_above="@id/home_ll_3"
+            android:id="@+id/kemu4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/px_km4" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/home_kemu4_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/home_kemu4"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/home_kemu4_ll"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

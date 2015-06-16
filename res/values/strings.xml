@@ -41,5 +41,12 @@
     <string name="home_kemu3_ll">训练厂</string>
     <string name="home_kemu4">科目四</string>
     <string name="home_kemu4_ll">安全文明</string>
+    <string name="home_xsbk">新手必看</string>
+    <string name="home_jxcx">驾校查询</string>
+    <string name="home_ksjq">考试技巧</string>
+    <string name="home_xc">小车</string>
+    <string name="home_hc">货车</string>
+    <string name="home_gjc">公交车</string>
+    <string name="home_mtc">摩托车</string>
 
 </resources>

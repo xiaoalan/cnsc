@@ -1,8 +1,15 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <style name="view_line">
+        <item name="android:background">@color/c_DFDFDF</item>
+    </style>
     <style name="text_black_18">
         <item name="android:textSize">18dp</item>
         <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="text_646464_18">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/c_979797</item>
     </style>
 
     <style name="text_black_20">
