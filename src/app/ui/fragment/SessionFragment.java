@@ -16,7 +16,7 @@ import app.ui.activity.peixu.SubjectTwo;
 public class SessionFragment extends BaseFragment implements OnClickListener {
 
 	private Intent intent;
-	private ImageView xc,hc,gjc,mtc;
+	private TextView xc,hc,gjc,mtc;
 	private TextView textView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
