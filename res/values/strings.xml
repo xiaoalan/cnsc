@@ -50,7 +50,9 @@
     <string name="home_mtc">摩托车</string>
     
     <!-- 科目二 -->
+    <string name="km2_qxss_string">正在练习：曲线行驶</string>
     <string name="km2_pxxx">培训信息</string>
-    <string name="km2_jly_xy">"教练员：齐师傅 | 学员：陈斌</string>
+    <string name="km2_jly_xy">教练员：齐师傅 | 学员：陈斌</string>
+    <string name="km2_abbr_dp">您本次练习，主要存在问题在于速度过快，打轮过早，建议放慢速度，调整下继续练习吧。</string>
 
 </resources>

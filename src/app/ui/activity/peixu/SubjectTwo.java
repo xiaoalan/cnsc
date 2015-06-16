@@ -28,6 +28,7 @@ import app.util.TypeIntent;
 
 public class SubjectTwo extends BaseActivity implements OnClickListener {
 	private TextView textView1, textView2, textView3;
+	private TextView textView3d1, textView3d2, textView3d3,textView3d4,textView3d5;
 	private View view1, view2, view3;// 需要滑动的页卡
 	private ListView listView1, listView2;// 需要滑动的页卡
 	private ViewPager viewPager;// viewpager
@@ -37,6 +38,8 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 	private int currIndex = 0;// 当前页卡编号
 	private int bmpW;// 动画图片宽度
 	private Intent intent;
+	private ImageView zkimage;
+	private boolean iszk = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,26 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 	}
 
 	private void initView() {
+		int flag = getIntent().getIntExtra("TAG", 0);
+		TextView textView = (TextView) findViewById(R.id.title_title);
+		switch (flag) {
+		case 1:
+			textView.setText("");
+			break;
+		case 2:
+			textView.setText("科目二训练场");
+			break;
+		case 3:
+			textView.setText("科目三训练场");
+			break;
+		case 4:
+			textView.setText("");
+			break;
+
+		default:
+			break;
+		}
+		
 		LayoutInflater lf = getLayoutInflater().from(this);
 		view1 = lf.inflate(R.layout.view_xlc, null);
 		view2 = lf.inflate(R.layout.view_xlc, null);
@@ -56,8 +79,16 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 		viewList.add(view1);
 		viewList.add(view2);
 		viewList.add(view3);
-
+		zkimage = (ImageView) view1.findViewById(R.id.km2_zk_button);
+		(view1.findViewById(R.id.km2_3d_tv1)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_3d_tv2)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_3d_tv3)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_3d_tv4)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_3d_tv5)).setOnClickListener(this);
+		
+		zkimage.setOnClickListener(this);
 		findViewById(R.id.title_back_button).setOnClickListener(this);
+		
 		viewPager = (ViewPager) findViewById(R.id.report_submit_viewpager);
 
 		viewPager.setAdapter(new MyViewPagerAdapter());
@@ -81,6 +112,32 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
+		case R.id.km2_3d_tv1:
+			intent = new Intent(this, AbbrActivity.class);
+			intent.putExtra("TAG", 0);
+			startActivity(intent);
+			break;
+		case R.id.km2_3d_tv2:
+			intent = new Intent(this, AbbrActivity.class);
+			intent.putExtra("TAG", 1);
+			startActivity(intent);
+			break;
+		case R.id.km2_3d_tv3:
+			
+			intent = new Intent(this, AbbrActivity.class);
+			intent.putExtra("TAG", 2);
+			startActivity(intent);
+			break;
+		case R.id.km2_3d_tv4:
+			intent = new Intent(this, AbbrActivity.class);
+			intent.putExtra("TAG", 3);
+			startActivity(intent);
+			break;
+		case R.id.km2_3d_tv5:
+			intent = new Intent(this, AbbrActivity.class);
+			intent.putExtra("TAG", 4);
+			startActivity(intent);
+			break;
 		case R.id.title_back_button:
 
 			finish();
@@ -92,6 +149,19 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 		case R.id.xlc_sp_pddd:
 			intent = new Intent(this, ViedoAcitivity.class);
 			startActivity(intent);
+			break;
+		case R.id.km2_zk_button:
+			if(!iszk){
+				iszk = true;
+				zkimage.setBackgroundResource(R.drawable.km2_ll_bh);
+				view1.findViewById(R.id.km2_ll_llzk).setVisibility(View.VISIBLE);
+				
+			}else{
+				iszk = false;
+				zkimage.setBackgroundResource(R.drawable.km2_ll_zk);
+				view1.findViewById(R.id.km2_ll_llzk).setVisibility(View.GONE);
+			}
+			
 			break;
 
 		default:

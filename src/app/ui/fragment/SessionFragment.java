@@ -66,10 +66,13 @@ public class SessionFragment extends BaseFragment implements OnClickListener {
 			break;
 		case R.id.kemu2:
 			intent = new Intent(getActivity(), SubjectTwo.class);
+			intent.putExtra("TAG", 2);
 			startActivity(intent);
 			break;
 		case R.id.kemu3:
-			textView.setText("您学习类型是：小车");
+			intent = new Intent(getActivity(), SubjectTwo.class);
+			intent.putExtra("TAG", 3);
+			startActivity(intent);
 			break;
 		case R.id.kemu4:
 			intent = new Intent(getActivity(), SubjectOne.class);
