@@ -29,7 +29,7 @@
                 android:id="@+id/px_hc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_hc" />
 
@@ -37,7 +37,7 @@
                 android:id="@+id/px_gjc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_gjc" />
 
@@ -45,7 +45,7 @@
                 android:id="@+id/px_mtc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_mtc" />
         </LinearLayout>
@@ -54,42 +54,82 @@
             android:id="@+id/px_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:text="您学习类型是：小车"
             android:textColor="@color/c_ff9900"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/c_b6b6b6" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:orientation="horizontal" >
 
-            <TextView
+            <RelativeLayout
                 android:id="@+id/kemu1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:background="#3775E9"
-                android:gravity="center"
-                android:text="科目一理论考试"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/px_km1" />
+				
+                <TextView
+                    android:id="@+id/home_kemu1_id"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/home_kemu1"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+                <TextView
+                    android:layout_below="@id/home_kemu1_id"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/home_kemu1_ll"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </RelativeLayout>
 
             <View
-                android:layout_width="1dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent" />
 
-            <TextView
+            <RelativeLayout
                 android:id="@+id/kemu2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="#00A11D"
-                android:gravity="center"
-                android:text="科目二训练厂"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/px_km2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="@string/home_kemu1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+            </RelativeLayout>
         </LinearLayout>
 
         <View
@@ -108,7 +148,7 @@
                 android:layout_weight="2"
                 android:background="#A700A0"
                 android:gravity="center"
-                android:text="科目三训练场"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -123,7 +163,7 @@
                 android:layout_weight="1.5"
                 android:background="#3775E9"
                 android:gravity="center"
-                android:text="科目四安全文明"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -133,7 +173,7 @@
             android:layout_height="1dp" />
 
         <TextView
-             android:id="@+id/px_ksjq"
+            android:id="@+id/px_ksjq"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="#DA5130"

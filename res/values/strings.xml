@@ -31,5 +31,15 @@
     <string name="text_company">去哪考 版权所有 由武汉快点科技提供技术支持</string>
     <string name="text_copyright">Copyright &#169; 2014-2020 Shizhenbao All Rights Reserved.</string>
     <string name="text_exit">退&#160;出</string>
+   
+    <!-- 首页 -->
+    <string name="home_kemu1">科目一</string>
+    <string name="home_kemu1_ll">理论</string>
+    <string name="home_kemu2">科目二</string>
+    <string name="home_kemu2_ll">训练厂</string>
+    <string name="home_kemu3">科目三</string>
+    <string name="home_kemu3_ll">训练厂</string>
+    <string name="home_kemu4">科目四</string>
+    <string name="home_kemu4_ll">安全文明</string>
 
 </resources>
