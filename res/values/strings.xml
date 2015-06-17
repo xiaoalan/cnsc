@@ -54,5 +54,12 @@
     <string name="km2_pxxx">培训信息</string>
     <string name="km2_jly_xy">教练员：齐师傅 | 学员：陈斌</string>
     <string name="km2_abbr_dp">您本次练习，主要存在问题在于速度过快，打轮过早，建议放慢速度，调整下继续练习吧。</string>
-
+	<string name="yes1">提交</string>
+    <string name="hint">欢迎提出您在使用过程中遇到的问题或宝贵意见</string>
+    <string name="feed_title">请将字数限制在10到100之间</string>
+    <string name="feed10">少于十个字不能提交哦</string>
+    <string name="feed100">反馈内容不能超过100个字哦</string>
+    <string name="feed_back_succeed">提交成功</string>
+    <string name="feed_back_fail">网络不可用</string>
+    <string name="feedback">意见反馈</string>
 </resources>

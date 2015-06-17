@@ -2,12 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white" 
-    android:orientation="vertical">
-    <include layout="@layout/title"/>
-    <VideoView 
-        android:id="@+id/video_view"
-          android:layout_width="match_parent"
-   		 android:layout_height="wrap_content"
-        />
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/content_padding"
+        android:text="@string/km2_pxxx"
+        android:textColor="@color/c_FD620D"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:layout_centerInParent="true"
+            android:id="@+id/video_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/an_select01" />
+    </RelativeLayout>
+
 </LinearLayout>

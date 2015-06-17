@@ -1,44 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/c_ffffff"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="@dimen/content_padding" >
+    android:paddingLeft="20dp"
+    android:paddingRight="2dp" >
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/layout_privacy"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#DA5130"
-        android:gravity="center"
-        android:text="菜鸟练车"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:layout_height="@dimen/row_height1"
+        android:layout_marginBottom="@dimen/row_margin"
+        android:layout_marginTop="@dimen/row_margin"
+        android:paddingLeft="@dimen/row_padding_left"
+        android:paddingRight="@dimen/row_padding_right" >
+
+        <TextView
+            style="@style/text_646464_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ss_jksq"
+            android:drawablePadding="10dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="驾考社区" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/go" />
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="0.5dp"
+        android:background="@color/c_DFDFDF" />
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/layout_general"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#6437B9"
-        android:gravity="center"
-        android:text="专业陪练"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:layout_height="@dimen/row_height1"
+        android:paddingLeft="@dimen/row_padding_left"
+        android:paddingRight="@dimen/row_padding_right" >
+
+        <TextView
+            style="@style/text_646464_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ss_cnlc"
+            android:drawablePadding="10dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="菜鸟练车" />
+
+        <ImageView
+            android:id="@+id/xlc_sp_cftc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/go" />
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="0.5dp"
+        android:background="@color/c_DFDFDF" />
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#149CAC"
-        android:gravity="center"
-        android:text="大众说说"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:layout_height="@dimen/row_height1"
+        android:paddingLeft="@dimen/row_padding_left"
+        android:paddingRight="@dimen/row_padding_right" >
+
+        <TextView
+            style="@style/text_646464_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ss_zypl"
+            android:drawablePadding="10dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="专业陪练" />
+
+        <ImageView
+            android:id="@+id/xlc_sp_pddd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/go" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/c_DFDFDF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height1"
+        android:paddingLeft="@dimen/row_padding_left"
+        android:paddingRight="@dimen/row_padding_right" >
+
+        <TextView
+            style="@style/text_646464_18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ss_dzss"
+            android:drawablePadding="10dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="大众说说" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/go" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/c_DFDFDF" />
 
 </LinearLayout>

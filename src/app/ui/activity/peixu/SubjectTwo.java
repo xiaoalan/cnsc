@@ -7,11 +7,13 @@ import mobi.kuaidian.qunakao.R;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +25,9 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import app.bean.GJItemBean;
 import app.ui.BaseActivity;
+import app.ui.adapter.GJListAdapter;
 import app.util.TypeIntent;
 
 public class SubjectTwo extends BaseActivity implements OnClickListener {
@@ -40,6 +44,7 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 	private Intent intent;
 	private ImageView zkimage;
 	private boolean iszk = false;
+	private List<GJItemBean> beans;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,16 +57,30 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 
 	private void initView() {
 		int flag = getIntent().getIntExtra("TAG", 0);
+		LayoutInflater lf = getLayoutInflater().from(this);
+		view1 = lf.inflate(R.layout.view_xlc, null);
+		view2 = lf.inflate(R.layout.view_xlgj, null);
+		view3 = lf.inflate(R.layout.view_spjx, null);
+		viewList = new ArrayList<View>();
+		viewList.add(view1);
+		viewList.add(view2);
+		viewList.add(view3);
 		TextView textView = (TextView) findViewById(R.id.title_title);
+		TextView textView1 = (TextView) view1.findViewById(R.id.km_num_tv);
+		TextView textView2 = (TextView) view1.findViewById(R.id.xlc_km_ttt);
 		switch (flag) {
 		case 1:
 			textView.setText("");
 			break;
 		case 2:
+			initData();
 			textView.setText("科目二训练场");
 			break;
 		case 3:
+			initData();
 			textView.setText("科目三训练场");
+			textView1.setText("培训内容：科目三");
+			textView2.setText("科目三教学视频");
 			break;
 		case 4:
 			textView.setText("");
@@ -71,20 +90,27 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 			break;
 		}
 		
-		LayoutInflater lf = getLayoutInflater().from(this);
-		view1 = lf.inflate(R.layout.view_xlc, null);
-		view2 = lf.inflate(R.layout.view_xlc, null);
-		view3 = lf.inflate(R.layout.view_xlc, null);
-		viewList = new ArrayList<View>();
-		viewList.add(view1);
-		viewList.add(view2);
-		viewList.add(view3);
+		
 		zkimage = (ImageView) view1.findViewById(R.id.km2_zk_button);
+		
 		(view1.findViewById(R.id.km2_3d_tv1)).setOnClickListener(this);
 		(view1.findViewById(R.id.km2_3d_tv2)).setOnClickListener(this);
 		(view1.findViewById(R.id.km2_3d_tv3)).setOnClickListener(this);
 		(view1.findViewById(R.id.km2_3d_tv4)).setOnClickListener(this);
 		(view1.findViewById(R.id.km2_3d_tv5)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_xlc_sp_01)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_xlc_sp_02)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_xlc_sp_03)).setOnClickListener(this);
+		(view1.findViewById(R.id.km2_xlc_sp_04)).setOnClickListener(this);
+		(view3.findViewById(R.id.km2_xlc_sp_01)).setOnClickListener(this);
+		(view3.findViewById(R.id.km2_xlc_sp_02)).setOnClickListener(this);
+		(view3.findViewById(R.id.km2_xlc_sp_03)).setOnClickListener(this);
+		(view3.findViewById(R.id.km2_xlc_sp_04)).setOnClickListener(this);
+		(view3.findViewById(R.id.km2_xlc_sp_05)).setOnClickListener(this);
+		
+		
+		ListView listView = (ListView) view2.findViewById(R.id.xlgj_listview);
+		listView.setAdapter(new GJListAdapter(this, beans));
 		
 		zkimage.setOnClickListener(this);
 		findViewById(R.id.title_back_button).setOnClickListener(this);
@@ -94,6 +120,21 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 		viewPager.setAdapter(new MyViewPagerAdapter());
 		viewPager.setCurrentItem(0);
 		viewPager.setOnPageChangeListener(new MyOnPageChangeListener());
+	}
+
+	private void initData() {
+		// TODO Auto-generated method stub
+		beans = new ArrayList<GJItemBean>();
+		GJItemBean bean1 = new GJItemBean(R.drawable.xlgj_qxxs,"曲线行驶","20150617 09:10:07");
+		GJItemBean bean2 = new GJItemBean(R.drawable.xlgj_dcrk,"倒车入库","20150617 10:21:12");
+		GJItemBean bean3 = new GJItemBean(R.drawable.xlgj_pddd,"坡道定点","20150617 10:42:00");
+		GJItemBean bean4 = new GJItemBean(R.drawable.xlgj_cfdt,"侧方停车","20150617 14:11:46");
+		GJItemBean bean5 = new GJItemBean(R.drawable.xlgj_zjzw,"直角转弯","20150617 15:23:02");
+		beans.add(bean1);
+		beans.add(bean2);
+		beans.add(bean3);
+		beans.add(bean4);
+		beans.add(bean5);
 	}
 
 	private void initTextView() {
@@ -107,7 +148,7 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 		textView1.setSelected(true);
 
 	}
-
+	String uri;
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
@@ -164,11 +205,59 @@ public class SubjectTwo extends BaseActivity implements OnClickListener {
 			
 			break;
 
+		case R.id.km2_xlc_sp_01:
+			uri = "android.resource://" + getPackageName() + "/" + R.raw.a10002;
+			intent = new Intent(this, ViedoAcitivity.class);
+			intent.putExtra("URI", uri);
+			intent.putExtra("TAG", 0);
+			startActivity(intent);
+			break;
+		case R.id.km2_xlc_sp_02:
+			uri = "android.resource://" + getPackageName() + "/" + R.raw.a10001;
+			intent = new Intent(this, ViedoAcitivity.class);
+			intent.putExtra("URI", uri);
+			intent.putExtra("TAG", 1);
+			startActivity(intent);
+			
+			break;
+		case R.id.km2_xlc_sp_03:
+			uri = "android.resource://" + getPackageName() + "/" + R.raw.a10004;
+			intent = new Intent(this, ViedoAcitivity.class);
+			intent.putExtra("URI", uri);
+			intent.putExtra("TAG", 2);
+			startActivity(intent);
+			
+			break;
+		case R.id.km2_xlc_sp_04:
+			uri = "android.resource://" + getPackageName() + "/" + R.raw.a10004;
+			intent = new Intent(this, ViedoAcitivity.class);
+			intent.putExtra("URI", uri);
+			intent.putExtra("TAG", 3);
+			startActivity(intent);
+			
+			break;
+		case R.id.km2_xlc_sp_05:
+			uri = "android.resource://" + getPackageName() + "/" + R.raw.a10003;
+			intent = new Intent(this, ViedoAcitivity.class);
+			intent.putExtra("URI", uri);
+			intent.putExtra("TAG", 4);
+			startActivity(intent);
+			
+			break;
 		default:
 			break;
 		}
 	}
 
+	void openVideo(Uri uri){
+		
+		//调用系统自带的播放器
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		Log.v("URI:::::::::", uri.toString());
+		intent.setDataAndType(uri, "video/mp4");
+		startActivity(intent);
+	}
+	
 	/**
 	 * 
 	 * 头标点击监听

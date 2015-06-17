@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import app.ui.BaseActivity;
@@ -13,23 +14,30 @@ import app.ui.TitleActivity;
 
 public class SubjectOne extends BaseActivity implements OnClickListener{
 	private RelativeLayout layout01,layout02,layout03,layout04,layout05,layout06;
-	
+	private boolean iszk = false;
+	private ImageView zkimage;
 	private int flag = 0;
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_subject_one);
+	        setContentView(R.layout.activity_subject_one1);
 	       
 	        flag = getIntent().getIntExtra("TAG", flag);
 	        initView();
 	    }
 
 	private void initView() {
+		TextView textView1 = (TextView) findViewById(R.id.km_num_tv);
 		TextView textView = (TextView) findViewById(R.id.title_title);
+		zkimage = (ImageView) findViewById(R.id.km2_zk_button);
+		zkimage.setOnClickListener(this);
 		if(flag==1){
 			textView.setText("科目一理论");
+			textView1.setText("培训内容：科目一");
+			
 		}else if(flag==4){
 			textView.setText("科目四安全文明");
+			textView1.setText("培训内容：科目四");
 		}
 		// TODO Auto-generated method stub
 		findViewById(R.id.layout_lx1).setOnClickListener(this);
@@ -65,7 +73,19 @@ public class SubjectOne extends BaseActivity implements OnClickListener{
 			
 			finish();
 			break;
-
+		case R.id.km2_zk_button:
+			if(!iszk){
+				iszk = true;
+				zkimage.setBackgroundResource(R.drawable.km2_ll_bh);
+				findViewById(R.id.km2_ll_llzk).setVisibility(View.VISIBLE);
+				
+			}else{
+				iszk = false;
+				zkimage.setBackgroundResource(R.drawable.km2_ll_zk);
+				findViewById(R.id.km2_ll_llzk).setVisibility(View.GONE);
+			}
+			
+			break;
 		default:
 			break;
 		}

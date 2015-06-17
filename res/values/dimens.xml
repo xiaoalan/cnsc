@@ -9,8 +9,10 @@
     <dimen name="table_margin">5dp</dimen>
     <dimen name="table_padding">0.2px</dimen>
     <dimen name="row_margin">0.2px</dimen>
+    <dimen name="hbs_row_jj">7.5dp</dimen>
 
     <!-- 行高 -->
+    <dimen name="row_height1">80dp</dimen>
     <dimen name="row_height">45dp</dimen>
     <dimen name="button_size">38dp</dimen>
 

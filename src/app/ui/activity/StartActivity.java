@@ -174,7 +174,8 @@ public class StartActivity extends FragmentActivity implements OnTabChangeListen
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.button_forward:
-			Toast.makeText(this, "fk", 0).show();
+			Intent intent = new Intent(this, FeedbackActivity.class);
+			startActivity(intent);
 			break;
 
 		default:
